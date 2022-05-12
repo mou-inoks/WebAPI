@@ -64,5 +64,21 @@ namespace WebAPI.Controllers
 
             return Ok();
         }
+        [HttpPut]
+
+        public async Task<ActionResult<List<Enclos>>> UpdateEnclos(Enclos request)
+        {
+            var enclos = await _context.Enclos.FindAsync(request.Id);
+            if (enclos == null)
+            {
+                return BadRequest("Animal not found.");
+            }
+            enclos.Type = request.Type;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(enclos);
+        }
     }
 }
+

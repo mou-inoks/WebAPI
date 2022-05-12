@@ -14,5 +14,7 @@ namespace WebAPI.Data
         public DbSet<Animal> Animals { get; set; }
 
         public DbSet<Enclos> Enclos { get; set; }
+
+        public DbSet<FavoriteFood> FavoriteFood { get; set; }
     }
 }

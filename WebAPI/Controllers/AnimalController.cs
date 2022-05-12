@@ -57,5 +57,21 @@ namespace WebAPI.Controllers
 
             return Ok();
         }
+        [HttpPut]
+
+        public async Task<ActionResult<List<Animal>>> UpdateAnimal(Animal request)
+        {
+            var animal = await _context.Animals.FindAsync(request.Id);
+            if (animal == null)
+            {
+                return BadRequest("Animal not found.");
+            }
+            animal.Nom = request.Nom;
+            animal.Age = request.Age;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(animal);
+        }
     }
 }

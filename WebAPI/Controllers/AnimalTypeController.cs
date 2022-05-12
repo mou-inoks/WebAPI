@@ -56,7 +56,6 @@ namespace WebAPI.Controllers
             if (dbAnimalType == null)
                 return BadRequest("Animal Type not found.");
 
-            dbAnimalType.Id = request.Id;
             dbAnimalType.race = request.race;
 
             await _context.SaveChangesAsync();
