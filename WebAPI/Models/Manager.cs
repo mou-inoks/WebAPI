@@ -58,35 +58,37 @@
 
             //1 
             if(-B.Y >= -A.Y && B.X > A.X)
-            {
-                e.X = c.X + L / 3 * Math.Cos(o + Math.PI / 3); // X 
-                e.Y = c.Y - L / 3 * Math.Sin(o + Math.PI / 3); // Y
-            }
+                RetoursPoints(c, e, o, L);
             //2
             else if(B.Y <= A.Y && B.X < A.X)
             {
                 o = Math.Asin(Math.Abs(B.X - A.X) / L);
                 var oP = o + Math.PI / 2;
-                e.X = c.X + L / 3 * Math.Cos(oP + Math.PI / 3); // X 
-                e.Y = c.Y - L / 3 * Math.Sin(oP + Math.PI / 3); // Y
+                RetoursPoints(c, e, oP, L);
             }
             //3
             else if(B.Y >= A.Y && B.X < A.X)
             {
                 o = Math.Acos(Math.Abs(B.X - A.X) / L);
                 var oPP = o + Math.PI;
-                e.X = c.X + L / 3 * Math.Cos(oPP + Math.PI / 3); // X 
-                e.Y = c.Y - L / 3 * Math.Sin(oPP + Math.PI / 3); // Y
+                RetoursPoints(c, e, oPP, L);
             }
             //
             else
             {
                 o = Math.Asin(Math.Abs(B.X - A.X) / L);
                 var oPPP = o + 3 * Math.PI / 2;
-                e.X = c.X + L / 3 * Math.Cos(oPPP + Math.PI / 3); // X 
-                e.Y = c.Y - L / 3 * Math.Sin(oPPP + Math.PI / 3); // Y
+                RetoursPoints(c, e, oPPP, L);
             }
             return new List<Point>() { c, d, e};
         }
+        static List<Point> RetoursPoints( Point c,Point e, double o, double L)
+        {
+            e.X = c.X + L / 3 * Math.Cos(o + Math.PI / 3); // X 
+            e.Y = c.Y - L / 3 * Math.Sin(o + Math.PI / 3); // Y
+
+            return new List<Point> { e };
+        }
+       
     }
 }

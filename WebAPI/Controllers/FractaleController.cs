@@ -8,13 +8,8 @@ namespace WebAPI.Controllers
     [ApiController]
     public class FractaleController : Controller
     {
-        private readonly DataContext _context;
-
         public Manager manager;
-        public FractaleController(DataContext context)
-        {
-            _context = context;
-        }
+        
         [HttpPost]
 
         public async Task<ActionResult<List<Point>>> Post([FromBody] Fractale fractale)
