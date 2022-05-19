@@ -10,13 +10,15 @@ namespace WebAPI.Controllers
     {
         [HttpPost]
 
-        public async Task<ActionResult<List<List<int>>>> Post()
+        public async Task<ActionResult<List<List<int>>>> Post(List<List<int>> current)
         {
             var lifeGameManager = new LifeGameManager();
+           
+            List<List<int>> next = new List<List<int>>() { };
+            lifeGameManager.TableInitialisation(current, next);
 
-            var tableau = lifeGameManager.TableInitialisation();
-            tableau = lifeGameManager.GenerateNextState(tableau);
-            return tableau;
+            lifeGameManager.GenerateNextState(current, next);
+            return next;
         }
 
 
