@@ -36,6 +36,11 @@ namespace WebAPI.Models
         }
         public void Missile(List<List<int>> current, List<List<int>> next)
         {
+
+            ///////////////////////
+            ///    CURRENT      ///
+            //////////////////////
+
             //Carré
             current[4][0] = 1;
             current[5][0] = 1;
@@ -83,7 +88,9 @@ namespace WebAPI.Models
 
 
 
-
+            ///////////////////////
+            ///      NEXT       ///
+            //////////////////////
 
             //Carré
             next[4][0] = 1;
