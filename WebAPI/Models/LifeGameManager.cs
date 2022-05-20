@@ -24,102 +24,111 @@ namespace WebAPI.Models
                     current.Add(rowCurrent);
                     next.Add(rowNext);
                 }
+                //APPELER LA FORME
 
-
-                //Carré
-                current[4][0] = 1;
-                current[5][0] = 1;
-                current[4][1] = 1;
-                current[5][1] = 1;
-
-                //Canon gauche 
-                current[4][10] = 1;
-                current[5][10] = 1;
-                current[6][10] = 1;
-                current[7][11] = 1;
-                current[8][12] = 1;
-                current[8][13] = 1;
-                current[7][15] = 1;
-                current[6][16] = 1;
-                current[5][16] = 1;
-                current[5][17] = 1;
-                current[4][16] = 1;
-                current[3][15] = 1;
-                current[5][14] = 1;
-                current[2][13] = 1;
-                current[2][12] = 1;
-                current[3][11] = 1;
-
-
-                //canon milieu
-                current[0][24] = 1;
-                current[1][24] = 1;
-                current[1][22] = 1;
-                current[2][20] = 1;
-                current[2][21] = 1;
-                current[3][20] = 1;
-                current[3][21] = 1;
-                current[4][20] = 1;
-                current[4][21] = 1;
-                current[5][22] = 1;
-                current[5][24] = 1;
-                current[6][24] = 1;
-
-                //Carré droit 
-                current[2][35] = 1;
-                current[2][34] = 1;
-                current[3][35] = 1;
-                current[2][34] = 1;
-
-
-
-
-
-                //Carré
-                next[4][0] = 1;
-                next[5][0] = 1;
-                next[4][1] = 1;
-                next[5][1] = 1;
-
-                //Canon gauche 
-                next[4][10] = 1;
-                next[5][10] = 1;
-                next[6][10] = 1;
-                next[7][11] = 1;
-                next[8][12] = 1;
-                next[8][13] = 1;
-                next[7][15] = 1;
-                next[6][16] = 1;
-                next[5][16] = 1;
-                next[5][17] = 1;
-                next[4][16] = 1;
-                next[3][15] = 1;
-                next[5][14] = 1;
-                next[2][13] = 1;
-                next[2][12] = 1;
-                next[3][11] = 1;
-
-
-                //canon milieu
-                next[0][24] = 1;
-                next[1][24] = 1;
-                next[1][22] = 1;
-                next[2][20] = 1;
-                next[2][21] = 1;
-                next[3][20] = 1;
-                next[3][21] = 1;
-                next[4][20] = 1;
-                next[4][21] = 1;
-                next[5][22] = 1;
-                next[5][24] = 1;
-                next[6][24] = 1;
-
-                //Carré droit 
-                next[2][35] = 1;
-                next[2][34] = 1;
-                next[3][35] = 1;
-                next[2][34] = 1;
+               
             }
+        }
+
+        public void Autre(List<List<int>> current, List<List<int>> next)
+        {
+
+        }
+        public void Missile(List<List<int>> current, List<List<int>> next)
+        {
+            //Carré
+            current[4][0] = 1;
+            current[5][0] = 1;
+            current[4][1] = 1;
+            current[5][1] = 1;
+
+            //Canon gauche 
+            current[4][10] = 1;
+            current[5][10] = 1;
+            current[6][10] = 1;
+            current[7][11] = 1;
+            current[8][12] = 1;
+            current[8][13] = 1;
+            current[7][15] = 1;
+            current[6][16] = 1;
+            current[5][16] = 1;
+            current[5][17] = 1;
+            current[4][16] = 1;
+            current[3][15] = 1;
+            current[5][14] = 1;
+            current[2][13] = 1;
+            current[2][12] = 1;
+            current[3][11] = 1;
+
+
+            //canon milieu
+            current[0][24] = 1;
+            current[1][24] = 1;
+            current[1][22] = 1;
+            current[2][20] = 1;
+            current[2][21] = 1;
+            current[3][20] = 1;
+            current[3][21] = 1;
+            current[4][20] = 1;
+            current[4][21] = 1;
+            current[5][22] = 1;
+            current[5][24] = 1;
+            current[6][24] = 1;
+
+            //Carré droit 
+            current[2][35] = 1;
+            current[2][34] = 1;
+            current[3][35] = 1;
+            current[2][34] = 1;
+
+
+
+
+
+            //Carré
+            next[4][0] = 1;
+            next[5][0] = 1;
+            next[4][1] = 1;
+            next[5][1] = 1;
+
+            //Canon gauche 
+            next[4][10] = 1;
+            next[5][10] = 1;
+            next[6][10] = 1;
+            next[7][11] = 1;
+            next[8][12] = 1;
+            next[8][13] = 1;
+            next[7][15] = 1;
+            next[6][16] = 1;
+            next[5][16] = 1;
+            next[5][17] = 1;
+            next[4][16] = 1;
+            next[3][15] = 1;
+            next[5][14] = 1;
+            next[2][13] = 1;
+            next[2][12] = 1;
+            next[3][11] = 1;
+
+
+            //canon milieu
+            next[0][24] = 1;
+            next[1][24] = 1;
+            next[1][22] = 1;
+            next[2][20] = 1;
+            next[2][21] = 1;
+            next[3][20] = 1;
+            next[3][21] = 1;
+            next[4][20] = 1;
+            next[4][21] = 1;
+            next[5][22] = 1;
+            next[5][24] = 1;
+            next[6][24] = 1;
+
+            //Carré droit 
+            next[2][35] = 1;
+            next[2][34] = 1;
+            next[3][35] = 1;
+            next[2][34] = 1;
         }
 
         public void GenerateNextState(List<List<int>> currentTable, List<List<int>> nextTable, int avancementDegre)
